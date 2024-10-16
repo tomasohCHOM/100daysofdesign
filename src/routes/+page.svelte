@@ -14,14 +14,14 @@
 					class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
 				/>
 			</a>
-			<a class="group flex gap-1" href="/day3">
+			<!-- <a class="group flex gap-1" href="/day3">
 				<span class="group-hover:underline underline-offset-2"> Day 3 Submission </span>
 				<img
 					src="/diagonalarrow.svg"
 					alt="Link Icon"
 					class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
 				/>
-			</a>
+			</a> -->
 			<a class="group flex gap-1" href="/day4">
 				<span class="group-hover:underline underline-offset-2"> Day 4 Submission </span>
 				<img
@@ -30,14 +30,14 @@
 					class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
 				/>
 			</a>
-			<a class="group flex gap-1" href="/day9">
+			<!-- <a class="group flex gap-1" href="/day9">
 				<span class="group-hover:underline underline-offset-2"> Day 9 Submission </span>
 				<img
 					src="/diagonalarrow.svg"
 					alt="Link Icon"
 					class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
 				/>
-			</a>
+			</a> -->
 		</div>
 	</section>
 	<img src="/acmdesign.svg" alt="ACM Design Icon" class="max-w-[24rem]" />
