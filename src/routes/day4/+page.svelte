@@ -1,3 +1,12 @@
+<script>
+	const buttonClass =
+		"rounded-full w-12 h-12 flex items-center justify-center text-lg font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors";
+
+	const buttonClassDefault = buttonClass + " bg-[#cfcfcf] hover:bg-[#cecece]";
+	const buttonClassPink = buttonClass + " bg-[#ffd0d0] hover:bg-[#ffd9d9]";
+	const buttonClassWhite = buttonClass + " bg-white hover:bg-gray-100";
+</script>
+
 <svelte:head>
 	<style>
 		body {
@@ -5,6 +14,8 @@
 		}
 	</style>
 </svelte:head>
+
+<h1 class="font-bold text-3xl p-2 mx-auto max-w-max text-slate-800">Baymax Calculator</h1>
 
 <main class="py-4 max-w-screen-md mx-auto relative h-screen">
 	<img src="/baymax/leg.svg" alt="Baymax Leg" class="absolute left-[28%] top-[77%] -scale-x-100" />
@@ -24,4 +35,26 @@
 		alt="Baymax Mouth"
 		class="absolute left-0 right-0 mx-auto top-[20%]"
 	/>
+
+	<div class="absolute top-[40%] left-0 right-0 mx-auto grid grid-cols-4 gap-2 w-[15rem]">
+		<button class={buttonClassPink}>CE</button>
+		<button class={buttonClassPink}>C</button>
+		<button class={buttonClassWhite}>+/-</button>
+		<button class={buttonClassWhite}>/</button>
+		<button class={buttonClassDefault}>7</button>
+		<button class={buttonClassDefault}>8</button>
+		<button class={buttonClassDefault}>9</button>
+		<button class={buttonClassWhite}>x</button>
+		<button class={buttonClassDefault}>4</button>
+		<button class={buttonClassDefault}>5</button>
+		<button class={buttonClassDefault}>6</button>
+		<button class={buttonClassWhite}>-</button>
+		<button class={buttonClassDefault}>1</button>
+		<button class={buttonClassDefault}>2</button>
+		<button class={buttonClassDefault}>3</button>
+		<button class={buttonClassWhite}>+</button>
+		<button class="{buttonClassDefault} w-full col-span-2">0</button>
+		<button class={buttonClassDefault}>.</button>
+		<button class="{buttonClassDefault} bg-white row-span-2">=</button>
+	</div>
 </main>
