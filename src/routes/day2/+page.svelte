@@ -38,7 +38,7 @@
 				<div class="relative">
 					<img src="/ecommerce/cd{i}.png" alt={"CD " + i} />
 					<div
-						class="absolute bg-white right-0 top-0 w-8 h-8 flex items-center
+						class="absolute bg-white right-0 top-4 w-8 h-8 flex items-center
             justify-center border border-black rounded-full"
 					>
 						x1
@@ -48,18 +48,28 @@
 		</div>
 		<div class="w-2/5 px-6 py-2 rounded-md border border-black">
 			<h2>SHOPPING CART</h2>
-			{#each shoppingCart as item}
-				<ol>
-					<li class="text-sm flex gap-10 items-center justify-between">
-						<span>{item.title}</span>
-						<span>...${item.price}</span>
-					</li>
-				</ol>
-			{/each}
+			<div class="border-b border-black border-dashed">
+				{#each shoppingCart as item}
+					<ol>
+						<li class="text-sm flex gap-10 items-center justify-between">
+							<span>{item.title}</span>
+							<span>...${item.price}</span>
+						</li>
+					</ol>
+				{/each}
+			</div>
+			<div class="mt-2 text-sm flex items-center justify-between">
+				<span>SUBTOTAL: $107.97</span>
+				<span>TAXES: $25.90</span>
+			</div>
+			<div class="mt-2 text-sm flex items-center justify-between">
+				<span>SHIPPING: PICKUP, FREE</span>
+				<span>TOTAL: $133.87</span>
+			</div>
 		</div>
 	</section>
 	<section class="grid grid-cols-2 gap-4">
-		<div class="rounded-md border flex border-black p-4">
+		<div class="rounded-md border flex gap-4 border-black p-4">
 			<div class="text-sm w-1/2 flex flex-col gap-8">
 				<h3>PAYMENT METHOD</h3>
 				<div class="flex flex-col">
@@ -74,9 +84,11 @@
 					<span>SHIPPING METHOD</span>
 					<span>Pick up only</span>
 				</div>
-				<button>MAKE SOME CHANGES</button>
+				<button class="border border-black p-2 rounded-md bg-[#ff7539] w-[80%]">
+					MAKE SOME CHANGES
+				</button>
 			</div>
-			<div class="flex flex-col gap-8">
+			<div class="flex flex-col gap-4 text-sm">
 				<div>
 					<label for="card-number">CARD NUMBER</label>
 					<input name="card-number" class="p-2 w-full border border-black rounded-lg" />
@@ -93,6 +105,13 @@
 					<label for="cvv">CVV</label>
 					<input name="cvv" class="p-2 w-full border border-black rounded-lg" />
 				</div>
+				<div>
+					<input name="save-card" type="checkbox" class="scale-125" />
+					<label class="text-xs" for="save-card">SAVE CREDIT CARD INFOR FOR NEXT TIME</label>
+				</div>
+				<button class="border border-black p-2 rounded-md bg-[#8894ff] w-full">
+					CONFIRM MY PURCHASE
+				</button>
 			</div>
 		</div>
 		<div>
