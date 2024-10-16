@@ -1,0 +1,12 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="16"
+  height="16"
+  viewBox="0 0 16 16"
+  fill="none"
+  class="arrow-icon"
+>
+  <rect width="16" height="16" fill="none"></rect>
+  <path d="M4 12 L12 4" stroke="black" stroke-width="1.5"></path>
+  <path d="M7 4 H12 V9" stroke="black" stroke-width="1.5"></path>
+</svg>
