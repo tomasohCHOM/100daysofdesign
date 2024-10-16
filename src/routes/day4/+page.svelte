@@ -1,8 +1,8 @@
 <script>
 	const buttonClass =
-		"rounded-full w-12 h-12 flex items-center justify-center text-lg font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors";
+		"rounded-full w-11 h-11 flex items-center justify-center text-lg font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors";
 
-	const buttonClassDefault = buttonClass + " bg-[#cfcfcf] hover:bg-[#cecece]";
+	const buttonClassDefault = buttonClass + " bg-[#d2d2d2] hover:bg-[#cecece]";
 	const buttonClassPink = buttonClass + " bg-[#ffd0d0] hover:bg-[#ffd9d9]";
 	const buttonClassWhite = buttonClass + " bg-white hover:bg-gray-100";
 </script>
@@ -36,25 +36,31 @@
 		class="absolute left-0 right-0 mx-auto top-[20%]"
 	/>
 
-	<div class="absolute top-[40%] left-0 right-0 mx-auto grid grid-cols-4 gap-2 w-[15rem]">
-		<button class={buttonClassPink}>CE</button>
-		<button class={buttonClassPink}>C</button>
-		<button class={buttonClassWhite}>+/-</button>
-		<button class={buttonClassWhite}>/</button>
-		<button class={buttonClassDefault}>7</button>
-		<button class={buttonClassDefault}>8</button>
-		<button class={buttonClassDefault}>9</button>
-		<button class={buttonClassWhite}>x</button>
-		<button class={buttonClassDefault}>4</button>
-		<button class={buttonClassDefault}>5</button>
-		<button class={buttonClassDefault}>6</button>
-		<button class={buttonClassWhite}>-</button>
-		<button class={buttonClassDefault}>1</button>
-		<button class={buttonClassDefault}>2</button>
-		<button class={buttonClassDefault}>3</button>
-		<button class={buttonClassWhite}>+</button>
-		<button class="{buttonClassDefault} w-full col-span-2">0</button>
-		<button class={buttonClassDefault}>.</button>
-		<button class="{buttonClassDefault} bg-white row-span-2">=</button>
+	<div class="absolute top-[38%] left-0 right-0 mx-auto max-w-max">
+		<div class="grid grid-cols-4 gap-2">
+			<button class={buttonClassPink}>CE</button>
+			<button class={buttonClassPink}>C</button>
+			<button class={buttonClassWhite}>+/-</button>
+			<button class={buttonClassWhite}>/</button>
+			<button class={buttonClassDefault}>7</button>
+			<button class={buttonClassDefault}>8</button>
+			<button class={buttonClassDefault}>9</button>
+			<button class={buttonClassWhite}>x</button>
+			<button class={buttonClassDefault}>4</button>
+			<button class={buttonClassDefault}>5</button>
+			<button class={buttonClassDefault}>6</button>
+			<button class={buttonClassWhite}>-</button>
+			<button class={buttonClassDefault}>1</button>
+			<button class={buttonClassDefault}>2</button>
+			<button class={buttonClassDefault}>3</button>
+			<button class={buttonClassWhite}>+</button>
+			<button class="{buttonClassDefault} min-w-full col-span-2">0</button>
+			<button class={buttonClassDefault}>.</button>
+			<button class="{buttonClassDefault} bg-white row-span-2">=</button>
+		</div>
+		<div class="flex flex-col bg-gray-800 rounded-lg text-white p-2">
+			<span class="text-right text-xs text-gray-400">2 + 5</span>
+			<span class="text-right">7</span>
+		</div>
 	</div>
 </main>
