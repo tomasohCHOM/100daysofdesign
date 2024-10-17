@@ -17,7 +17,7 @@
 
 <h1 class="font-bold text-3xl p-2 mx-auto max-w-max text-slate-800">Baymax Calculator</h1>
 
-<main class="py-4 max-w-screen-md mx-auto relative h-screen">
+<main class="py-4 max-w-screen-md mx-auto relative h-[695px]">
 	<img src="/baymax/leg.svg" alt="Baymax Leg" class="absolute left-[28%] top-[77%] -scale-x-100" />
 	<img src="/baymax/leg.svg" alt="Baymax Leg" class="absolute right-[28%] top-[77%]" />
 

@@ -13,6 +13,10 @@
 			price: 36.59
 		}
 	];
+
+	const subtotal = shoppingCart.reduce((acc, item) => acc + item.price, 0);
+	const taxes = subtotal * 0.24;
+	const total = subtotal + taxes;
 </script>
 
 <svelte:head>
@@ -26,19 +30,21 @@
 	</style>
 </svelte:head>
 
-<main class="grid gap-4 mx-auto max-w-screen-xl py-2">
+<main class="grid gap-4 mx-auto max-w-screen-xl p-2">
 	<img src="/ecommerce/grassbackground.png" alt="Grass Background Banner" class="w-full" />
 	<div class="flex items-center justify-between text-xl">
 		<span>BACK TO CART</span>
 		<span>VINLYZ.NET</span>
 	</div>
-	<section class="flex gap-4 w-full">
-		<div class="w-3/5 rounded-md flex items-center justify-center gap-8 border border-black">
+	<section class="flex flex-col lg:flex-row gap-4 w-full">
+		<div
+			class="w-full p-2 lg:w-3/5 rounded-md flex items-center justify-center gap-4 md:gap-8 border border-black"
+		>
 			{#each [1, 2, 3] as i}
 				<div class="relative">
 					<img src="/ecommerce/cd{i}.png" alt={"CD " + i} />
 					<div
-						class="absolute bg-white right-0 top-4 w-8 h-8 flex items-center
+						class="absolute bg-white right-0 top-4 text-xs w-6 h-6 sm:text-[1rem] sm:w-8 sm:h-8 flex items-center
             justify-center border border-black rounded-full"
 					>
 						x1
@@ -46,11 +52,11 @@
 				</div>
 			{/each}
 		</div>
-		<div class="w-2/5 px-6 py-2 rounded-md border border-black">
+		<div class="w-full lg:w-2/5 px-6 py-2 rounded-md border border-black">
 			<h2>SHOPPING CART</h2>
-			<div class="border-b border-black border-dashed">
+			<div class="border-b border-black border-dashed pb-4">
 				{#each shoppingCart as item}
-					<ol>
+					<ol class="list-disc">
 						<li class="text-sm flex gap-10 items-center justify-between">
 							<span>{item.title}</span>
 							<span>...${item.price}</span>
@@ -58,19 +64,19 @@
 					</ol>
 				{/each}
 			</div>
-			<div class="mt-2 text-sm flex items-center justify-between">
-				<span>SUBTOTAL: $107.97</span>
-				<span>TAXES: $25.90</span>
+			<div class="mt-4 text-sm flex items-center justify-between">
+				<span>SUBTOTAL: ${subtotal.toFixed(2)}</span>
+				<span>TAXES: ${taxes.toFixed(2)}</span>
 			</div>
 			<div class="mt-2 text-sm flex items-center justify-between">
 				<span>SHIPPING: PICKUP, FREE</span>
-				<span>TOTAL: $133.87</span>
+				<span>TOTAL: ${total.toFixed(2)}</span>
 			</div>
 		</div>
 	</section>
-	<section class="grid grid-cols-2 gap-4">
-		<div class="rounded-md border flex gap-4 border-black p-4">
-			<div class="text-sm w-1/2 flex flex-col gap-8">
+	<section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+		<div class="rounded-md border flex flex-col sm:flex-row gap-4 border-black p-4">
+			<div class="text-sm w-full sm:w-1/2 flex flex-col gap-8">
 				<h3>PAYMENT METHOD</h3>
 				<div class="flex flex-col">
 					<span>CONTACT</span>
@@ -84,29 +90,29 @@
 					<span>SHIPPING METHOD</span>
 					<span>Pick up only</span>
 				</div>
-				<button class="border border-black p-2 rounded-md bg-[#ff7539] w-[80%]">
+				<button class="border border-black p-2 rounded-md bg-[#ff7539] sm:w-[80%]">
 					MAKE SOME CHANGES
 				</button>
 			</div>
 			<div class="flex flex-col gap-4 text-sm">
 				<div>
 					<label for="card-number">CARD NUMBER</label>
-					<input name="card-number" class="p-2 w-full border border-black rounded-lg" />
+					<input id="card-number" class="p-2 w-full border border-black rounded-lg" />
 				</div>
 				<div>
 					<label for="card-name">NAME ON CARD</label>
-					<input name="card-name" class="p-2 w-full border border-black rounded-lg" />
+					<input id="card-name" class="p-2 w-full border border-black rounded-lg" />
 				</div>
 				<div>
 					<label for="expiration">EXPIRATION DATE</label>
-					<input name="expiration" class="p-2 w-full border border-black rounded-lg" />
+					<input id="expiration" class="p-2 w-full border border-black rounded-lg" />
 				</div>
 				<div>
 					<label for="cvv">CVV</label>
-					<input name="cvv" class="p-2 w-full border border-black rounded-lg" />
+					<input id="cvv" class="p-2 w-full border border-black rounded-lg" />
 				</div>
 				<div>
-					<input name="save-card" type="checkbox" class="scale-125" />
+					<input id="save-card" type="checkbox" class="scale-125" />
 					<label class="text-xs" for="save-card">SAVE CREDIT CARD INFOR FOR NEXT TIME</label>
 				</div>
 				<button class="border border-black p-2 rounded-md bg-[#8894ff] w-full">
