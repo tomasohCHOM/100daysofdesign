@@ -33,7 +33,10 @@
 <main class="grid gap-4 mx-auto max-w-screen-xl p-2">
 	<img src="/ecommerce/grassbackground.png" alt="Grass Background Banner" class="w-full" />
 	<div class="flex items-center justify-between text-xl">
-		<span>BACK TO CART</span>
+		<span class="flex gap-1 cursor-pointer hover:underline underline-offset-4">
+			<img src="/ecommerce/leftarrow.svg" alt="Left Arrow" class="w-5" />
+			BACK TO CART
+		</span>
 		<span>VINLYZ.NET</span>
 	</div>
 	<section class="flex flex-col lg:flex-row gap-4 w-full">
@@ -53,31 +56,36 @@
 			{/each}
 		</div>
 		<div class="w-full lg:w-2/5 px-6 py-2 rounded-md border border-black">
-			<h2>SHOPPING CART</h2>
+			<h2 class="flex gap-1">
+				<img src="/ecommerce/bag.svg" alt="Shopping Bag" class="w-3" /> SHOPPING CART
+			</h2>
 			<div class="border-b border-black border-dashed pb-4">
-				{#each shoppingCart as item}
-					<ol class="list-disc">
+				<ol class="pl-3">
+					{#each shoppingCart as item}
 						<li class="text-sm flex gap-10 items-center justify-between">
 							<span>{item.title}</span>
 							<span>...${item.price}</span>
 						</li>
-					</ol>
-				{/each}
+					{/each}
+				</ol>
 			</div>
 			<div class="mt-4 text-sm flex items-center justify-between">
-				<span>SUBTOTAL: ${subtotal.toFixed(2)}</span>
-				<span>TAXES: ${taxes.toFixed(2)}</span>
+				<span><span class="font-semibold">SUBTOTAL:</span> ${subtotal.toFixed(2)}</span>
+				<span><span class="font-semibold">TAXES:</span> ${taxes.toFixed(2)}</span>
 			</div>
 			<div class="mt-2 text-sm flex items-center justify-between">
-				<span>SHIPPING: PICKUP, FREE</span>
-				<span>TOTAL: ${total.toFixed(2)}</span>
+				<span><span class="font-semibold">SHIPPING:</span>SHIPPING: PICKUP, FREE</span>
+				<span><b>TOTAL: ${total.toFixed(2)}</b></span>
 			</div>
 		</div>
 	</section>
 	<section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
 		<div class="rounded-md border flex flex-col sm:flex-row gap-4 border-black p-4">
 			<div class="text-sm w-full sm:w-1/2 flex flex-col gap-8">
-				<h3>PAYMENT METHOD</h3>
+				<h3 class="flex gap-1">
+					<img src="/ecommerce/card.svg" alt="Credit Card" class="w-4" />
+					PAYMENT METHOD
+				</h3>
 				<div class="flex flex-col">
 					<span>CONTACT</span>
 					<span>christinex143@gmail.com</span>

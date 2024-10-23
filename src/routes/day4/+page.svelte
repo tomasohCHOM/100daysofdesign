@@ -15,9 +15,14 @@
 	</style>
 </svelte:head>
 
-<h1 class="font-bold text-3xl p-2 mx-auto max-w-max text-slate-800">Baymax Calculator</h1>
+<h1 class="font-bold text-3xl px-2 p-8 mx-auto max-w-max text-slate-800">Baymax Calculator</h1>
 
-<main class="py-4 max-w-screen-md mx-auto relative h-[695px]">
+<p class="mx-auto text-center max-w-sm p-4 text-lg md:hidden">
+	Baymax calculator does not look good in screen sizes smaller than 768px. Please use a larger
+	screen size to view the Baymax calculator! :D
+</p>
+
+<main class="py-4 max-w-screen-md mx-auto relative h-[695px] hidden md:block">
 	<img src="/baymax/leg.svg" alt="Baymax Leg" class="absolute left-[28%] top-[77%] -scale-x-100" />
 	<img src="/baymax/leg.svg" alt="Baymax Leg" class="absolute right-[28%] top-[77%]" />
 
