@@ -38,6 +38,14 @@
 					class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
 				/>
 			</a> -->
+			<a class="group flex gap-1" href="/day14">
+				<span class="underline-offset-2 group-hover:underline"> Day 14 Submission </span>
+				<img
+					src="/diagonalarrow.svg"
+					alt="Link Icon"
+					class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+				/>
+			</a>
 		</div>
 	</section>
 	<img src="/acmdesign.svg" alt="ACM Design Icon" class="max-w-[24rem]" />
