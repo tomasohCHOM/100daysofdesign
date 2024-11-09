@@ -8,20 +8,41 @@
 	</style>
 </svelte:head>
 
-<main class="h-screen">
-	<nav>
-		<div class="hidden sm:flex items-center justify-around gap-4 text-lg lg:text-2xl mt-4">
-			<span class="hover:underline underline-offset-2 cursor-pointer">Quack Facts</span>
-			<span class="hover:underline underline-offset-2 cursor-pointer">Duckumentary</span>
-			<span class="hover:underline underline-offset-2 cursor-pointer">QuackTube</span>
-			<button class="bg-[#577eb1] px-4 py-1 rounded-2xl hover:bg-opacity-80 transition">
-				Join the Flock
-			</button>
-		</div>
-	</nav>
+<nav class="p-4">
+	<button class="sm:hidden block ml-auto">
+		<img src="/ducks/menu.svg" alt="Menu Icon" class="w-8" />
+	</button>
 
-	<img class="absolute w-32 lg:w-96 left-14 top-1/4" src="/ducks/duck1.svg" alt="Duck 1" />
-	<img class="absolute w-24 lg:w-80 left-1/3 top-1/3" src="/ducks/duck2.svg" alt="Duck 2" />
+	<div
+		class="sm:hidden absolute bg-[#577eb1] rounded-md py-2 px-4 flex flex-col gap-2 right-4 top-16 text-white"
+	>
+		<span>Quack Facts</span>
+		<span>Duckumentary</span>
+		<span>QuackTube</span>
+		<span class="font-semibold">Join the Flock</span>
+	</div>
+
+	<div class="hidden sm:flex items-center justify-around gap-4 text-lg lg:text-2xl mt-4">
+		<span class="hover:underline underline-offset-2 cursor-pointer">Quack Facts</span>
+		<span class="hover:underline underline-offset-2 cursor-pointer">Duckumentary</span>
+		<span class="hover:underline underline-offset-2 cursor-pointer">QuackTube</span>
+		<button class="bg-[#577eb1] px-4 py-1 rounded-2xl hover:bg-opacity-80 transition">
+			Join the Flock
+		</button>
+	</div>
+</nav>
+
+<main class="h-screen relative">
+	<img
+		class="absolute w-32 sm:w-56 md:w-72 lg:w-[360px] lg:left-14 top-[20%] left-8 lg:top-1/4"
+		src="/ducks/duck1.svg"
+		alt="Duck 1"
+	/>
+	<img
+		class="absolute w-24 sm:w-48 md:w-64 lg:w-80 left-1/2 md:left-[40%] top-1/3"
+		src="/ducks/duck2.svg"
+		alt="Duck 2"
+	/>
 </main>
 
 <h1 class="flex z-20 flex-col font-medium text-3xl sm:text-6xl right-12 bottom-1/4 absolute">
@@ -43,7 +64,7 @@
 		background-repeat: no-repeat;
 	}
 
-	@media screen and (min-width: 1024px) {
+	@media screen and (min-width: 1280px) {
 		main {
 			background-size: cover;
 		}
