@@ -15,33 +15,33 @@
 	</style>
 </svelte:head>
 
-<h1 class="font-bold text-3xl px-2 p-8 mx-auto max-w-max text-slate-800">Baymax Calculator</h1>
+<h1 class="mx-auto max-w-max p-8 px-2 text-3xl font-bold text-slate-800">Baymax Calculator</h1>
 
-<p class="mx-auto text-center max-w-sm p-4 text-lg md:hidden">
+<p class="mx-auto max-w-sm p-4 text-center text-lg md:hidden">
 	Baymax calculator does not look good in screen sizes smaller than 768px. Please use a larger
 	screen size to view the Baymax calculator! :D
 </p>
 
-<main class="py-4 max-w-screen-md mx-auto relative h-[695px] hidden md:block">
+<main class="relative mx-auto hidden h-[695px] max-w-screen-md py-4 md:block">
 	<img src="/baymax/leg.svg" alt="Baymax Leg" class="absolute left-[28%] top-[77%] -scale-x-100" />
 	<img src="/baymax/leg.svg" alt="Baymax Leg" class="absolute right-[28%] top-[77%]" />
 
-	<img src="/baymax/body.svg" alt="Baymax Body" class="absolute top-[28%] left-0 right-0 mx-auto" />
+	<img src="/baymax/body.svg" alt="Baymax Body" class="absolute left-0 right-0 top-[28%] mx-auto" />
 
-	<img src="/baymax/arm.svg" alt="Baymax Arm" class="absolute top-[35%] left-[12%] -scale-x-100" />
-	<img src="/baymax/arm.svg" alt="Baymax Arm" class="absolute top-[35%] right-[12%]" />
+	<img src="/baymax/arm.svg" alt="Baymax Arm" class="absolute left-[12%] top-[35%] -scale-x-100" />
+	<img src="/baymax/arm.svg" alt="Baymax Arm" class="absolute right-[12%] top-[35%]" />
 
 	<img src="/baymax/head.svg" alt="Baymax Head" class="absolute left-0 right-0 mx-auto" />
 
-	<div class="absolute top-[18%] left-[35%] w-6 h-6 bg-black rounded-full"></div>
-	<div class="absolute top-[18%] left-[61%] w-6 h-6 bg-black rounded-full"></div>
+	<div class="absolute left-[35%] top-[18%] h-6 w-6 rounded-full bg-black"></div>
+	<div class="absolute left-[61%] top-[18%] h-6 w-6 rounded-full bg-black"></div>
 	<img
 		src="/baymax/mouth.svg"
 		alt="Baymax Mouth"
-		class="absolute left-0 right-0 mx-auto top-[20%]"
+		class="absolute left-0 right-0 top-[20%] mx-auto"
 	/>
 
-	<div class="absolute top-[38%] left-0 right-0 mx-auto max-w-max">
+	<div class="absolute left-0 right-0 top-[38%] mx-auto max-w-max">
 		<div class="grid grid-cols-4 gap-2">
 			<button class={buttonClassPink}>CE</button>
 			<button class={buttonClassPink}>C</button>
@@ -59,11 +59,11 @@
 			<button class={buttonClassDefault}>2</button>
 			<button class={buttonClassDefault}>3</button>
 			<button class={buttonClassWhite}>+</button>
-			<button class="{buttonClassDefault} min-w-full col-span-2">0</button>
+			<button class="{buttonClassDefault} col-span-2 min-w-full">0</button>
 			<button class={buttonClassDefault}>.</button>
-			<button class="{buttonClassDefault} bg-white row-span-2">=</button>
+			<button class="{buttonClassDefault} row-span-2 bg-white">=</button>
 		</div>
-		<div class="flex flex-col bg-gray-800 rounded-lg text-white p-2">
+		<div class="flex flex-col rounded-lg bg-gray-800 p-2 text-white">
 			<span class="text-right text-xs text-gray-400">2 + 5</span>
 			<span class="text-right">7</span>
 		</div>

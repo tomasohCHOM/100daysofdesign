@@ -22,7 +22,7 @@
 <nav class="p-4">
 	<div>
 		<button
-			class="sm:hidden block ml-auto"
+			class="ml-auto block sm:hidden"
 			on:click={triggerDropdown}
 			on:focusout={handleDropdownFocusLoss}
 		>
@@ -30,7 +30,7 @@
 		</button>
 
 		<div
-			class="sm:hidden transition-transform absolute scale-0 bg-[#577eb1] rounded-md py-2 px-4 flex flex-col gap-2 right-4 top-16 text-white"
+			class="absolute right-4 top-16 flex scale-0 flex-col gap-2 rounded-md bg-[#577eb1] px-4 py-2 text-white transition-transform sm:hidden"
 			class:scale-100={isDropdownOpen}
 		>
 			<span>Quack Facts</span>
@@ -40,55 +40,55 @@
 		</div>
 	</div>
 
-	<div class="hidden sm:flex items-center justify-around gap-4 text-lg lg:text-2xl mt-4">
-		<span class="hover:underline underline-offset-2 cursor-pointer">Quack Facts</span>
-		<span class="hover:underline underline-offset-2 cursor-pointer">Duckumentary</span>
-		<span class="hover:underline underline-offset-2 cursor-pointer">QuackTube</span>
-		<button class="bg-[#577eb1] px-4 py-1 rounded-2xl hover:bg-opacity-80 transition">
+	<div class="mt-4 hidden items-center justify-around gap-4 text-lg sm:flex lg:text-2xl">
+		<span class="cursor-pointer underline-offset-2 hover:underline">Quack Facts</span>
+		<span class="cursor-pointer underline-offset-2 hover:underline">Duckumentary</span>
+		<span class="cursor-pointer underline-offset-2 hover:underline">QuackTube</span>
+		<button class="rounded-2xl bg-[#577eb1] px-4 py-1 transition hover:bg-opacity-80">
 			Join the Flock
 		</button>
 	</div>
 </nav>
 
-<main class="h-screen relative">
+<main class="relative h-screen">
 	<img
-		class="z-20 absolute w-32 sm:w-56 md:w-72 lg:w-[360px] lg:left-14 top-[20%] left-8 lg:top-1/4"
+		class="absolute left-8 top-[20%] z-20 w-32 sm:w-56 md:w-72 lg:left-14 lg:top-1/4 lg:w-[360px]"
 		src="/ducks/duck1.svg"
 		alt="Duck 1"
 	/>
 	<img
-		class="z-20 absolute w-24 sm:w-48 md:w-64 lg:w-80 left-1/2 md:left-[40%] top-1/3"
+		class="absolute left-1/2 top-1/3 z-20 w-24 sm:w-48 md:left-[40%] md:w-64 lg:w-80"
 		src="/ducks/duck2.svg"
 		alt="Duck 2"
 	/>
 </main>
 
-<h1 class="flex z-20 flex-col font-medium text-3xl sm:text-6xl right-12 bottom-1/4 absolute">
+<h1 class="absolute bottom-1/4 right-12 z-20 flex flex-col text-3xl font-medium sm:text-6xl">
 	<span>Duck Dynasty</span>
 	<span>Water Edition</span>
 </h1>
 
-<div class="h-[50vh] bg-[#577eb1] -mt-1 relative">
+<div class="relative -mt-1 h-[50vh] bg-[#577eb1]">
 	<img
 		src="/ducks/lilypad1.svg"
 		alt="Lilypad 1"
-		class="hidden sm:block absolute -scale-x-100 w-48 lg:w-96 -top-[35%] lg:-top-[80%] lg:-left-24 rotate-12"
+		class="absolute -top-[35%] hidden w-48 rotate-12 -scale-x-100 sm:block lg:-left-24 lg:-top-[80%] lg:w-96"
 	/>
 
 	<img
 		src="/ducks/lilypad1.svg"
 		alt="Lilypad 1"
-		class="hidden sm:block absolute -scale-x-100 w-24 lg:w-96 left-1/4 top-[25%] lg:-top-[60%] lg:left-1/4 -rotate-12"
+		class="absolute left-1/4 top-[25%] hidden w-24 -rotate-12 -scale-x-100 sm:block lg:-top-[60%] lg:left-1/4 lg:w-96"
 	/>
 	<img
 		src="/ducks/lilypad2.svg"
 		alt="Lilypad 2"
-		class="hidden sm:block absolute w-64 lg:w-96 right-0 -top-[35%] lg:-top-[100%] xl:-top-[150%]"
+		class="absolute -top-[35%] right-0 hidden w-64 sm:block lg:-top-[100%] lg:w-96 xl:-top-[150%]"
 	/>
 
-	<div class="absolute border-[#4fabd4] border-2 bottom-1/2 right-1/4 rounded-full w-16 h-16"></div>
-	<div class="absolute border-[#4fabd4] border-2 bottom-1/3 right-1/3 rounded-full w-12 h-12"></div>
-	<div class="absolute border-[#4fabd4] border-2 bottom-[20%] right-1/4 rounded-full w-8 h-8"></div>
+	<div class="absolute bottom-1/2 right-1/4 h-16 w-16 rounded-full border-2 border-[#4fabd4]"></div>
+	<div class="absolute bottom-1/3 right-1/3 h-12 w-12 rounded-full border-2 border-[#4fabd4]"></div>
+	<div class="absolute bottom-[20%] right-1/4 h-8 w-8 rounded-full border-2 border-[#4fabd4]"></div>
 </div>
 
 <style>
