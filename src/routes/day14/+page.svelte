@@ -9,22 +9,28 @@
 	</style>
 </svelte:head>
 
-<div class="flex h-[668.8px] w-full items-center justify-center">
-	<main class="relative h-full w-[min(1024px,90vw)] border-2 border-white">
+<div class="flex h-screen w-full items-center justify-center">
+	<main class="relative h-[668.8px] w-[min(1024px,90vw)] border-2 border-white">
 		<div class="flex h-full flex-col">
-			<h1 class="mt-48 text-center text-5xl">DEBUT ALBUM RELEASE</h1>
+			<h1 class="mt-48 text-center text-3xl md:text-5xl">DEBUT ALBUM RELEASE</h1>
 			<div class="mt-4 flex items-center justify-center gap-6">
-				<div class="flex flex-col items-center rounded-xl bg-[#d7ffb0] bg-opacity-25 p-4">
-					<span class="text-6xl">63</span>
-					<span class="text-2xl">days</span>
+				<div
+					class="flex w-20 flex-col items-center rounded-xl bg-[#d7ffb0] bg-opacity-25 p-4 md:w-32"
+				>
+					<span class="text-2xl md:text-6xl">63</span>
+					<span class="md:text-2xl">days</span>
 				</div>
-				<div class="flex flex-col items-center rounded-xl bg-[#d7ffb0] bg-opacity-25 p-4">
-					<span class="text-6xl">9</span>
-					<span class="text-2xl">hours</span>
+				<div
+					class="flex w-20 flex-col items-center rounded-xl bg-[#d7ffb0] bg-opacity-25 p-4 md:w-32"
+				>
+					<span class="text-2xl md:text-6xl">9</span>
+					<span class="md:text-2xl">hours</span>
 				</div>
-				<div class="flex flex-col items-center rounded-xl bg-[#d7ffb0] bg-opacity-25 p-4">
-					<span class="text-6xl">10</span>
-					<span class="text-2xl">minutes</span>
+				<div
+					class="flex w-20 flex-col items-center rounded-xl bg-[#d7ffb0] bg-opacity-25 p-4 md:w-32"
+				>
+					<span class="text-2xl md:text-6xl">10</span>
+					<span class="md:text-2xl">mins</span>
 				</div>
 			</div>
 
@@ -40,7 +46,9 @@
 				<div class="flex items-center gap-1 text-[0.75rem] sm:text-[1rem]">
 					<img src="/debut/spotify.svg" alt="Spotify Icon" class="w-6" /> Sarah Kinsley
 				</div>
-				<p class="text-[0.625rem] sm:text-[1rem]">STREAM 'Last Time We Never Meet again' NOW</p>
+				<p class="text-right text-[0.625rem] sm:text-[1rem]">
+					STREAM 'Last Time We Never Meet again' NOW
+				</p>
 			</footer>
 		</div>
 	</main>
@@ -48,7 +56,7 @@
 
 <style>
 	main {
-		background: url("/debut/album-image.png") rgba(176, 160, 144, 0.5) 100% / cover no-repeat;
+		background: url("/debut/album-image.png") rgba(176, 160, 144, 0.4) 100% / cover no-repeat;
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-blend-mode: overlay;
