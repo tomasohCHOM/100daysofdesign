@@ -10,7 +10,7 @@
 </svelte:head>
 
 <div class="flex h-screen w-full items-center justify-center">
-	<main class="relative h-[668.8px] w-[min(1024px,90vw)] border-2 border-white">
+	<main class="relative h-[668.8px] w-[min(1024px,90vw)]">
 		<div class="flex h-full flex-col">
 			<h1 class="mt-48 text-center text-3xl md:text-5xl">DEBUT ALBUM RELEASE</h1>
 			<div class="mt-4 flex items-center justify-center gap-6">

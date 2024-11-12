@@ -1,3 +1,12 @@
+<script>
+	const submissions = [
+		{ day: 2, title: "Vinlyz.net E-Commerce Site", username: "t_1907" },
+		{ day: 3, title: "Duck Dynasty Water Edition", username: "demonicgoat" },
+		{ day: 4, title: "Baymax Calculator", username: "bergerboyyy" },
+		{ day: 14, title: "Debut Album Release", username: "semsema" }
+	];
+</script>
+
 <main class="flex flex-col gap-4 sm:flex-row">
 	<section class="flex max-w-[768px] flex-col gap-2 p-8">
 		<h1 class="text-4xl font-semibold">100 Days Of Design Challenge</h1>
@@ -6,46 +15,18 @@
 			<b>100 Days of Design</b> Challenge.
 		</p>
 		<div class="max-w-max pl-4">
-			<a class="group flex gap-1" href="/day2">
-				<span class="underline-offset-2 group-hover:underline"> Day 2 Submission </span>
-				<img
-					src="/diagonalarrow.svg"
-					alt="Link Icon"
-					class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
-				/>
-			</a>
-			<a class="group flex gap-1" href="/day3">
-				<span class="underline-offset-2 group-hover:underline"> Day 3 Submission </span>
-				<img
-					src="/diagonalarrow.svg"
-					alt="Link Icon"
-					class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
-				/>
-			</a>
-			<a class="group flex gap-1" href="/day4">
-				<span class="underline-offset-2 group-hover:underline"> Day 4 Submission </span>
-				<img
-					src="/diagonalarrow.svg"
-					alt="Link Icon"
-					class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
-				/>
-			</a>
-			<!-- <a class="group flex gap-1" href="/day9">
-				<span class="group-hover:underline underline-offset-2"> Day 9 Submission </span>
-				<img
-					src="/diagonalarrow.svg"
-					alt="Link Icon"
-					class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-				/>
-			</a> -->
-			<a class="group flex gap-1" href="/day14">
-				<span class="underline-offset-2 group-hover:underline"> Day 14 Submission </span>
-				<img
-					src="/diagonalarrow.svg"
-					alt="Link Icon"
-					class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
-				/>
-			</a>
+			{#each submissions as submission}
+				<a class="group flex gap-1" href="/day{submission.day}">
+					<span class="underline-offset-2 group-hover:underline">
+						{submission.title} (by @{submission.username}) - Day {submission.day} Submission
+					</span>
+					<img
+						src="/diagonalarrow.svg"
+						alt="Link Icon"
+						class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+					/>
+				</a>
+			{/each}
 		</div>
 	</section>
 	<img src="/acmdesign.svg" alt="ACM Design Icon" class="max-w-[24rem]" />
