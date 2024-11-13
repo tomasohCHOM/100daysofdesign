@@ -7,7 +7,8 @@
 		{ day: 2, title: "Vinlyz.net E-Commerce Site", username: "t_1907" },
 		{ day: 3, title: "Duck Dynasty Water Edition", username: "demonicgoat" },
 		{ day: 4, title: "Baymax Calculator", username: "bergerboyyy" },
-		{ day: 14, title: "Debut Album Release", username: "semsema" }
+		{ day: 14, title: "Debut Album Release", username: "semsema" },
+		{ day: 12, title: "the GOOSBERRY", username: "surrealreal" }
 	];
 </script>
 
@@ -114,7 +115,8 @@
 <style>
 	@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-	main {
+	:global(body) {
+		background-color: #ffdada;
 		font-family: "Poppins", sans-serif;
 	}
 
