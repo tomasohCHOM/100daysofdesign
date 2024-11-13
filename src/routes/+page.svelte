@@ -1,10 +1,11 @@
 <script>
+	const figmaFile =
+		"https://www.figma.com/design/KLnR40zAXkLJAKY6KLLdXb/100-Days-of-Design-%F0%9F%96%8A%EF%B8%8F?node-id=3698-2&node-type=canvas&m=dev";
 	const submissions = [
 		{ day: 2, title: "Vinlyz.net E-Commerce Site", username: "t_1907" },
 		{ day: 3, title: "Duck Dynasty Water Edition", username: "demonicgoat" },
 		{ day: 4, title: "Baymax Calculator", username: "bergerboyyy" },
-		{ day: 14, title: "Debut Album Release", username: "semsema" },
-		{ day: 25, title: "ACM Design", username: "bergerboyyy" }
+		{ day: 14, title: "Debut Album Release", username: "semsema" }
 	];
 </script>
 
@@ -73,32 +74,47 @@
 			class="absolute -bottom-16 left-1/2 h-32 w-[20rem] -translate-x-1/2 rounded-full bg-[#fc7373] md:w-[30rem]"
 		/>
 	</div>
-	<main class="relative flex w-full flex-col gap-4 bg-[#fc7373] py-24 text-white sm:flex-row">
+	<main class="relative flex w-full flex-col gap-4 bg-[#ff8989] px-8 py-32 text-white">
 		<p class="absolute right-4 top-4 text-right text-[0.75rem] font-semibold text-white">
 			Designed by @bergerboyyy (Day 25 Submission)
 		</p>
-		<section class="flex max-w-[768px] flex-col gap-2 p-8">
-			<h1 class="text-4xl font-bold">100 Days Of Design Challenge</h1>
-			<p>
-				A compilation of some of ACM CSUF's <span>Design Team</span> favorite designs from the
-				<b>100 Days of Design</b> Challenge.
+		<h1 class="text-2xl font-bold md:text-7xl">
+			100 Days Of Design Challenge <img
+				src="/acmdesign.svg"
+				alt="ACM Design Icon"
+				class="inline w-8 md:w-20"
+			/>
+		</h1>
+
+		<div class="flex max-w-screen-xl flex-col gap-2 md:text-xl">
+			<p class="my-4">
+				<b>100 days of design</b> was a challenge conducted by the Design Team at ACM CSUF, where each
+				day, the team would introduce a new design prompt, allowing participants to test their design
+				abilities, pushing outside of their comfort zone, & playing with different styles! 💡
 			</p>
-			<div class="max-w-max pl-4">
+			<p class="my-4">
+				The Design Team at ACM CSUF has gathered their TOP 10 Favorite Designs from this challenge
+				in <a class="underline underline-offset-2" href={figmaFile}>this Figma file</a>. The purpose
+				of this website was for me to try to implement each of these designs with code (Svelte +
+				TailwindCSS):
+			</p>
+			<ul class="max-w-max list-disc pl-8">
 				{#each submissions as submission}
-					<a class="group flex gap-1" href="/day{submission.day}">
-						<span class="underline-offset-2 group-hover:underline">
-							{submission.title} (by @{submission.username}) - Day {submission.day} Submission
-						</span>
-						<img
-							src="/diagonalarrow.svg"
-							alt="Link Icon"
-							class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
-						/>
-					</a>
+					<li class="list-item">
+						<a class="group flex gap-1" href="/day{submission.day}">
+							<span class="underline-offset-2 group-hover:underline">
+								{submission.title} (by @{submission.username}) - Day {submission.day} Submission
+							</span>
+							<img
+								src="/diagonalarrow.svg"
+								alt="Link Icon"
+								class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+							/>
+						</a>
+					</li>
 				{/each}
-			</div>
-		</section>
-		<img src="/acmdesign.svg" alt="ACM Design Icon" class="max-w-[24rem]" />
+			</ul>
+		</div>
 	</main>
 </div>
 
