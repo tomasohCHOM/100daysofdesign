@@ -1,4 +1,6 @@
 <script>
+	import Card from "../lib/components/card.svelte";
+
 	const figmaFile =
 		"https://www.figma.com/design/KLnR40zAXkLJAKY6KLLdXb/100-Days-of-Design-%F0%9F%96%8A%EF%B8%8F?node-id=3698-2&node-type=canvas&m=dev";
 	const submissions = [
@@ -86,7 +88,7 @@
 			/>
 		</h1>
 
-		<div class="flex max-w-screen-xl flex-col gap-2 md:text-xl">
+		<div class="flex max-w-screen-2xl flex-col gap-2 md:text-2xl">
 			<p class="my-4">
 				<b>100 days of design</b> was a challenge conducted by the Design Team at ACM CSUF, where each
 				day, the team would introduce a new design prompt, allowing participants to test their design
@@ -98,22 +100,13 @@
 				of this website was for me to try to implement each of these designs with code (Svelte +
 				TailwindCSS):
 			</p>
-			<ul class="max-w-max list-disc pl-8">
+			<div
+				class="mx-auto mt-8 grid max-w-screen-2xl gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+			>
 				{#each submissions as submission}
-					<li class="list-item">
-						<a class="group flex gap-1" href="/day{submission.day}">
-							<span class="underline-offset-2 group-hover:underline">
-								{submission.title} (by @{submission.username}) - Day {submission.day} Submission
-							</span>
-							<img
-								src="/diagonalarrow.svg"
-								alt="Link Icon"
-								class="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
-							/>
-						</a>
-					</li>
+					<Card {submission} />
 				{/each}
-			</ul>
+			</div>
 		</div>
 	</main>
 </div>
