@@ -1,5 +1,3 @@
-<img src="/gooseberry/gooseberry.svg" alt="Gooseberry Poster" class="mx-auto max-w-screen-lg" />
-
 <svelte:head>
 	<style>
 		:root {
@@ -12,3 +10,5 @@
 		}
 	</style>
 </svelte:head>
+
+<img src="/gooseberry/gooseberry.svg" alt="Gooseberry Poster" class="mx-auto max-w-screen-lg" />
