@@ -4,11 +4,12 @@
 	const figmaFile =
 		"https://www.figma.com/design/KLnR40zAXkLJAKY6KLLdXb/100-Days-of-Design-%F0%9F%96%8A%EF%B8%8F?node-id=3698-2&node-type=canvas&m=dev";
 	const submissions = [
-		{ day: 2, title: "Vinlyz.net E-Commerce Site", username: "t_1907" },
-		{ day: 3, title: "Duck Dynasty Water Edition", username: "demonicgoat" },
-		{ day: 4, title: "Baymax Calculator", username: "bergerboyyy" },
-		{ day: 14, title: "Debut Album Release", username: "semsema" },
-		{ day: 12, title: "the GOOSBERRY", username: "surrealreal" }
+		{ day: "2", title: "Vinlyz.net E-Commerce Site", username: "t_1907" },
+		{ day: "3", title: "Duck Dynasty Water Edition", username: "demonicgoat" },
+		{ day: "3x2", title: "Cyberpunk", username: "kroizzont" },
+		{ day: "4", title: "Baymax Calculator", username: "bergerboyyy" },
+		{ day: "14", title: "Debut Album Release", username: "semsema" },
+		{ day: "12", title: "the GOOSBERRY", username: "surrealreal" }
 	];
 </script>
 

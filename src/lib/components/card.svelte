@@ -11,10 +11,10 @@
 		alt="Link Icon"
 		class="absolute right-2 top-2 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
 	/>
-	<img src="/submissions/day{submission.day}.png" alt="Submission Screenshot" />
-	<span class="max-w-max rounded-full bg-[#ffdada] px-2 py-1 text-sm font-bold text-[#fc7373]"
-		>Day {submission.day}</span
-	>
+	<img src="/submissions/day{submission.day}.png" alt="Submission Screenshot" class="rounded-lg" />
+	<span class="max-w-max rounded-full bg-[#ffdada] px-2 py-1 text-sm font-bold text-[#fc7373]">
+		Day {submission.day}
+	</span>
 	<p class="leading-6">
 		<span class="font-bold">{submission.title}</span>
 		<span class="text-sm">by @{submission.username}</span>
