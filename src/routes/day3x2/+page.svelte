@@ -10,6 +10,11 @@
 			line-height: normal;
 			letter-spacing: 4px;
 			text-transform: uppercase;
+
+			color-scheme: dark;
+		}
+		body {
+			background-color: #222222;
 		}
 	</style>
 </svelte:head>
